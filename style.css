@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.card {
+  padding: 10px;
+}
+.emoji {
+  font-size: 80px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.main-card {
+  text-align: center;
+  padding: 5px;
+}
+.temperature {
+  font-weight: bold;
+}
+.date {
+  text-align: right;
+}
+.card-title {
+  font-weight: bold;
+}
