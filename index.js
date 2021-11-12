@@ -1,4 +1,4 @@
-import axios from "axios";
+
 let now = new Date();
 console.log(now.getDate());
 console.log(now.getSeconds());
