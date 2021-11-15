@@ -1,10 +1,5 @@
 
 let now = new Date();
-console.log(now.getDate());
-console.log(now.getSeconds());
-console.log(now.getDay());
-console.log(now.getFullYear());
-console.log(now.getMonth());
 
 let dayOfTheWeek = document.querySelector("#weekday");
 let dateTime = document.querySelector("#date-time");
@@ -47,6 +42,7 @@ monthNumber.innerHTML = `${month} ${date}`;
 time.innerHTML = `${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
+  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("#temperatureDegrees").innerHTML = `${temperature}°C`;
@@ -56,6 +52,9 @@ function displayWeatherCondition(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#windSpeed");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(event) {
@@ -71,3 +70,4 @@ function handleSubmit(event) {
 }
 let searchForm = document.querySelector("#city-search");
 searchForm.addEventListener("submit", handleSubmit);
+

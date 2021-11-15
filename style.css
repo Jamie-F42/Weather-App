@@ -6,9 +6,10 @@ h1 {
 .card {
   padding: 10px;
 }
-.emoji {
-  font-size: 80px;
-  text-align: center;
+.icon {
+  width: 150px;
+  display: block;
+  margin: auto;
   padding-bottom: 20px;
 }
 .main-card {
