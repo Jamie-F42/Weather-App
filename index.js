@@ -50,6 +50,12 @@ function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   document.querySelector("#temperatureDegrees").innerHTML = `${temperature}°C`;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#windSpeed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function search(event) {
