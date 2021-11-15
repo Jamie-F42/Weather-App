@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,10 +17,10 @@
   <body>
     <div class="container">
       <div class="row">
-        <h1 class="col-6" id="city">
+        <h1 class="col-4" id="city">
           Toronto
         </h1>
-        <form class="col-6" id="city-search">
+        <form class="col-8" id="city-search">
           <input
             type="text"
             placeholder="Search for a city"
@@ -30,38 +30,35 @@
           />
           <input type="submit" value="Search" />
         </form>
-        <datalist id="datalistOptions">
-          <option value="Toronto"> </option>
-          <option value="New York"> </option>
-          <option value="Seattle"> </option>
-          <option value="Los Angeles"> </option>
-          <option value="Chicago"> </option>
-        </datalist>
       </div>
       <div class="row">
-        <div class="card col-8" style="width: 26rem;">
+        <div class="card g-col-8" style="width: 26rem;">
           <div class="card-body">
             <div class="row">
-              <h2 class="card-title col" id="weekday">Monday</h2>
-              <h2 class="date col" id="date-time">Sept. 20th 12:00</h2>
+              <h2 class="card-title col-5" id="weekday">Tuesday</h2>
+              <h2 class="date col-7" id="monthNumber">Sept. 20th </h2> 
+            </div>
+            <div class= "row">
+            <div class="date-time col" id="time">12:00</div>
             </div>
             <div class="emoji">🌤</div>
-            <h1 class="main-card" id="temperatureDegrees">15°C</h1>
-            <h3 class="main-weather main-card">Chance of Precipitation</h3>
-            <h3 class="secondary-weather main-card">Cloudy</h3>
-            <h2 class="high-low main-card">20°C / 12°C</h2>
+            <h1 class="main-card temperature-a" id="temperatureDegrees">15°C</h1>
+            <div class="container unit-buttons">
+            <button class="unit" id="celsius">C°</button><button class="unit" id="fahrenheit">F°</button>
+           </div>
+            <h3 class="main-weather main-card" id="precipitation">Precipitation</h3>
+            <h3 class="secondary-weather main-card" id="description">Description</h3>
           </div>
         </div>
-        <div class="card col-4" style="width: 14rem;">
+        <div class="card g-col-4" style="width: 14rem;">
           <div class="card-body">
             <div class="row">
               <h2 class="card-title col">*Next Day*</h2>
             </div>
             <div class="emoji">🌤</div>
-            <h1 class="temperature main-card">15°C</h1>
-            <h3 class="main-weather main-card">Chance of Precipitation</h3>
+            <h1 class="temperature-b main-card">15°C</h1>
+            <h3 class="main-weather main-card">Precipitation</h3>
             <h3 class="secondary-weather main-card">Cloudy</h3>
-            <h2 class="high-low main-card">20°C / 12°C</h2>
           </div>
         </div>
       </div>

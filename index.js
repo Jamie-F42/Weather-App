@@ -41,8 +41,10 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
+
 dayOfTheWeek.innerHTML = `${day}`;
-dateTime.innerHTML = `${month} ${date} ${hours}:${minutes}`;
+monthNumber.innerHTML = `${month} ${date}`;
+time.innerHTML = `${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
