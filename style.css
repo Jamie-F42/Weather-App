@@ -5,7 +5,11 @@ h1 {
 }
 .card {
   padding: 10px;
+  border: solid;
+  border-width: 10px;
+  border-color: forestgreen;
 }
+
 .icon {
   width: 150px;
   display: block;
