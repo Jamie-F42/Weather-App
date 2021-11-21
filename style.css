@@ -4,10 +4,10 @@ h1 {
   width: 100%;
 }
 .card {
-  padding: 10px;
-  border: solid;
-  border-width: 10px;
-  border-color: forestgreen;
+  padding: 4px;
+  border:solid;
+  border-width: 6px !important;
+  border-color: rgb(11,84,13) !important;
 }
 
 .icon {
@@ -15,6 +15,12 @@ h1 {
   display: block;
   margin: auto;
   padding-bottom: 20px;
+}
+.icon-forecast {
+  width: 20px;
+  display: block;
+  margin: auto;
+  padding: 0px;
 }
 .main-card {
   text-align: center;
@@ -43,7 +49,9 @@ h1 {
 }
 .temperature-b{
 font-size: 30px;
-font-weight: 500;
+font-weight: bold;
+padding: 10px 0px 10px 0px;
+margin: 0px;
 }
 .unit-buttons{
   display:block;
@@ -58,7 +66,7 @@ font-weight: 500;
   background-color: transparent;
   color:black;
   border-radius: 8px;
-  border-color: forestgreen;
+  border-color: rgb(11,84,13);
   border-width: 4px;
   border-style:solid;
   align-items:center;
@@ -66,8 +74,8 @@ font-weight: 500;
   font-weight: bold;
 }
 .active{
-  border-color:forestgreen;
-  background-color: forestgreen;
+  border-color:rgb(11,84,13);
+  background-color: rgb(11,84,13);
   color: white;
 }
 .additional-weather{
@@ -75,6 +83,13 @@ font-weight: 500;
   font-size: 30px;
   font-weight: 500;
   padding-top: 18px;
+}
+.description-forecast{
+  text-transform:capitalize;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 4px;
+  margin: 4px;
 }
 .wind{
   font-size: 22px;
@@ -88,4 +103,15 @@ font-weight: 500;
 .github{
   margin-left:25%;
   display:block;
+}
+.card-title-forecast{
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 0px;
+}
+.date-forecast{
+  font-size:20px;
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
 }
