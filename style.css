@@ -3,15 +3,24 @@ h1 {
   margin: 0 auto;
   width: 100%;
 }
+hr{
+  margin: 6px;
+  
+}
 .card {
-  padding: 4px;
-  border:solid;
-  border-width: 6px !important;
+  padding: 0px;
+  border:solid !important;
   border-color: rgb(11,84,13) !important;
 }
+.left-card{
+border-width: 6px 3px 6px 6px !important;
+}
 
+.right-card{
+border-width: 6px 6px 6px 3px !important;
+}
 .icon {
-  width: 150px;
+  width: 130px;
   display: block;
   margin: auto;
   padding-bottom: 20px;
@@ -20,7 +29,7 @@ h1 {
   width: 20px;
   display: block;
   margin: auto;
-  padding: 0px;
+  padding: 4px 0px 0px 4px;
 }
 .main-card {
   text-align: center;
@@ -88,12 +97,13 @@ margin: 0px;
   text-transform:capitalize;
   font-size: 20px;
   font-weight: 500;
-  padding: 4px;
+  padding: 2px;
   margin: 4px;
 }
 .wind{
   font-size: 22px;
   font-weight: 500;
+  padding-bottom: 0px;
 }
 .humidity{
   text-transform:capitalize;
@@ -104,14 +114,20 @@ margin: 0px;
   margin-left:25%;
   display:block;
 }
-.card-title-forecast{
+.weekday-forecast{
   font-size: 22px;
-  font-weight: bolder;
-  padding: 0px;
+  font-weight: bold;
+  padding: 5px 0px 0px 0px;
 }
 .date-forecast{
-  font-size:20px;
+  font-size:18px;
   text-align: right;
-  padding: 0px;
-  margin: 0px;
+  padding-top: 11px;
+  margin-top: 4px;
+}
+.card-title-forecast{
+  font-size: 26px;
+  font-weight: bolder;
+  padding-bottom: 4px;
+  margin: 0px 0px 4px 0px;
 }

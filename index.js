@@ -59,6 +59,27 @@ function displayWeatherCondition(response) {
 celsiusTemperature= response.data.main.temp;
 }
 
+function displayForecast(){
+  let forecastElement= document.querySelector("#forecast");
+
+  let forecastHTML = "";
+  let days = ["Tue", "Wed", "Thur"];
+  days.forEach(function(day) {
+  forecastHTML= forecastHTML + `
+            <div class="row">
+              <div class="weekday-forecast col-5">${day}</div>
+              <h2 class="date-forecast col-7" id="monthNumberForecast">Sept 20</h2> 
+            </div>
+            <div class="row">
+            <img class="icon-forecast col-5" id="iconForecast" alt="clear" src="https://icon-library.com/images/sunny-weather-icon/sunny-weather-icon-6.jpg"/>
+            <h1 class="temperature-b main-card col-7" id="temperatureDegreesForecast">15°C</h1>
+            </div>
+            <h3 class="main-weather main-card description-forecast" id="descriptionForecast">Description</h3>
+            <hr size="4" width="100%" color="black">
+          `;
+          });
+          forecastElement.innerHTML = forecastHTML;
+}
 
 function search(event) {
   let apiKey = "2b8193e1fb0166e722b7330ca6c589b4";
@@ -91,6 +112,9 @@ function showCelsiusTemperature(event){
 }
 
 let celsiusTemperature = null;
+
+search("Toronto");
+displayForecast();
 
 let fahrenheitConvert = document.querySelector("#fahrenheit");
 fahrenheitConvert.addEventListener("click", showFahrenheitTemperature);
