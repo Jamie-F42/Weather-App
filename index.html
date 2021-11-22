@@ -20,7 +20,7 @@
         <h1 class="col-4" id="city">
           Toronto
         </h1>
-        <form class="col-8" id="city-search">
+        <form class="col-8" id="citySearch">
           <input
             type="text"
             placeholder="Search for a city"
@@ -42,7 +42,17 @@
             <div class="date-time col" id="time">12:00</div>
             </div>
             <img class="icon" id="icon" alt="clear" src="https://icon-library.com/images/sunny-weather-icon/sunny-weather-icon-6.jpg"/>
-            <h1 class="main-card temperature-a" id="temperatureDegrees">15°C</h1>
+            <div class="row">
+            <h1 class="main-card temperature-a col" id="temperatureDegrees">15°C</h1>
+            <div class="temperature-min-max col">
+              <div class="row">
+                <div class="temperature-max" id="temperatureMax"> 20°C</div>
+              </div>
+               <div class="row">
+                 <div class="temperature-min" id="temperatureMin"> 1°C
+                    </div>
+            </div>
+          </div>
             <div class="container unit-buttons">
             <button class="unit active" id="celsius">C°</button><button class="unit" id="fahrenheit">F°</button>
            </div>
@@ -51,7 +61,8 @@
             <h3 class="main-card wind">Wind: <span id="windSpeed"></span> km/h</h3>
           </div>
         </div>
-        <div class="card right-card g-col-5" style="width: 14rem;">
+        </div>
+        <div class="card right-card g-col-4" style="width: 14rem;">
           <div class="card-body">
             <div class="row">
               <div class="card-title-forecast">Forecast</div>
@@ -59,7 +70,6 @@
             <div class="forecast" id="forecast">Forecast</div>
           </div>
         </div>
-      </div>
     </div>
     <a class="github" href="https://github.com/Jamie-F42/Weather-App">Open-source code by Jamie Foster</a>
     <script src="index.js"></script>
