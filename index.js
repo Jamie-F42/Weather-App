@@ -55,10 +55,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperatureDegrees").innerHTML = `${temperature}°C`;
 
   let temperaturemin = Math.round(response.data.main.temp_min);
-  document.querySelector("#temperatureMin").innerHTML = `${temperaturemin}°C`;
-
   let temperaturemax = Math.round(response.data.main.temp_max);
-  document.querySelector("#temperatureMax").innerHTML = `${temperaturemax}°C`;
+  document.querySelector("#temperatureMinMax").innerHTML = `${temperaturemax}°/${temperaturemin}°C`;
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -142,34 +140,5 @@ search("Toronto");
 let searchForm = document.querySelector("#citySearch");
 searchForm.addEventListener("submit", handleSubmit);
 
-function showFahrenheitTemperature(event){
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  let temperatureElementMin = document.querySelector("#temperatureMin");
-  let temperatureElementMax = document.querySelector("#temperatureMax");
-  celsiusConvert.classList.remove("active");
-  fahrenheitConvert.classList.add("active");
-  temperatureDegrees.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
-  temperatureElementMin.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
-  temperatureElementMax.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
-}
-function showCelsiusTemperature(event){
-  event.preventDefault();
-  celsiusConvert.classList.add("active");
-  fahrenheitConvert.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  let temperatureElementMin = document.querySelector("#temperatureMin");
-  let temperatureElementMax = document.querySelector("#temperatureMax");
-  temperatureDegrees.innerHTML = `${Math.round(celsiusTemperature)}°C`;
-  temperatureElementMin.innerHTML = `${Math.round(celsiusTemperature)}°C`;
-  temperatureElementMax.innerHTML = `${Math.round(celsiusTemperature)}°C`;
-}
 
-let celsiusTemperature = null;
 
-let fahrenheitConvert = document.querySelector("#fahrenheit");
-fahrenheitConvert.addEventListener("click", showFahrenheitTemperature);
-
-let celsiusConvert = document.querySelector("#celsius");
-celsiusConvert.addEventListener("click", showCelsiusTemperature);
