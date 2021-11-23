@@ -7,6 +7,9 @@ hr{
   margin: 6px;
   
 }
+.container{
+  max-width: 800px !important;
+}
 .card {
   padding: 0px;
   border:solid !important;
@@ -72,7 +75,7 @@ border-width: 6px 6px 6px 3px !important;
 font-size: 30px;
 font-weight:500;
 padding:0px;
-color:rgb(104, 95, 95);
+color:grey;
 text-align: center;
 }
 
