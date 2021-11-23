@@ -19,6 +19,15 @@ border-width: 6px 3px 6px 6px !important;
 .right-card{
 border-width: 6px 6px 6px 3px !important;
 }
+
+.left-column{
+  padding-right: 0px !important;
+}
+
+.right-column{
+  padding-left: 0px !important;
+}
+
 .icon {
   width: 130px;
   display: block;
@@ -26,10 +35,10 @@ border-width: 6px 6px 6px 3px !important;
   padding-bottom: 20px;
 }
 .icon-forecast {
-  width: 20px;
+  max-width: 88px !important;
   display: block;
   margin: auto;
-  padding: 4px 0px 0px 4px;
+  padding: 0px;
 }
 .main-card {
   text-align: center;
@@ -54,7 +63,7 @@ border-width: 6px 6px 6px 3px !important;
 .temperature-a{
   font-size: 50px;
   font-weight:500;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   text-align: right;
   margin-inline-start: 10%;
   margin-inline-end: 0%;
@@ -87,7 +96,7 @@ margin: 0px;
   display:inline;
   text-align: center;
   margin:3px;
-  padding: 4px 8px 4px 8px;
+  padding: 4px 8px 8px 8px;
   background-color: transparent;
   color:black;
   border-radius: 8px;
@@ -107,7 +116,7 @@ margin: 0px;
   text-transform:capitalize;
   font-size: 30px;
   font-weight: 500;
-  padding-top: 18px;
+  padding: 12px;
 }
 .description-forecast{
   text-transform:capitalize;
@@ -119,7 +128,7 @@ margin: 0px;
 .wind{
   font-size: 22px;
   font-weight: 500;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
 }
 .humidity{
   text-transform:capitalize;

@@ -118,7 +118,7 @@ function displayForecast(response){
             <img class="icon-forecast col-5" id="iconForecast" alt="clear" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" />
             <h1 class="temperature-b main-card col-7" id="temperatureDegreesForecast">${Math.round(forecastDay.temp.day)}°</h1>
             </div>
-            <h3 class="main-weather main-card description-forecast" id="descriptionForecast">Description</h3>
+            <h3 class="main-weather main-card description-forecast" id="descriptionForecast">${forecastDay.weather[0].description}</h3>
             <hr size="4" width="100%" color="black">
           `;
     }
